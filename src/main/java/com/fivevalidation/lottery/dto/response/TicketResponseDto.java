@@ -8,6 +8,7 @@ import java.util.List;
 @Builder
 public record TicketResponseDto(
         Long id,
+        String owner,
         List<Integer> numbers,
         Double totalPrice,
         LocalDateTime dateOfPurchase

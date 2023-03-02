@@ -27,6 +27,7 @@ public class TicketMapper {
                 .totalPrice(totalPrice)
                 .numbers(numbers)
                 .dateOfPurchase(ticketModel.getDateOfPurchase())
+                .owner(ticketModel.getCustomer().getName())
                 .build();
     }
 
