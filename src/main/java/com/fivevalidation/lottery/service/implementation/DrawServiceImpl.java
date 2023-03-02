@@ -18,6 +18,13 @@ public class DrawServiceImpl implements DrawService {
 
     private final TicketRepository ticketRepository;
 
+    /**
+     * This method generates a random list of 5 unique numbers between 1 and 10. It then filters the
+     * list of tickets to find all tickets that have at least 5 of the winning numbers. After that it calculates
+     * the jackpot and the amount of money each winner will receive. If there is no winner, it returns a DrawResult
+     * object with an empty customerName and the accumulated jackpot.
+     * @return A list of DrawResult objects, one for each winner.
+     */
     @Override
     public List<DrawResult> getDrawResult() {
         List<Integer> winningNumbersArray = TicketUtils.generateRandomUniqueNumbers(5);
